@@ -1,0 +1,20 @@
+*program for to check even/odd by using Bitwise operator
+
+public class aditya
+{
+    public static void main(String[]args)
+    {
+        int x=13;
+        if((x & 1)!=0)
+        System.out.println("odd");
+        else
+        System.out.println("even");
+    }
+}
+
+
+                out put
+
+       java -cp /tmp/OmZOm84LpF aditya
+  
+        odd
