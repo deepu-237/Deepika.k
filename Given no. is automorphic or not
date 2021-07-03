@@ -1,0 +1,34 @@
+"import java.util.*;
+class automorphic
+{
+public static void main(String args[])
+  {
+   Scanner in=new Scanner(System.in);
+   int n;
+   System.out.println("Enter no:");
+   n=in.nextInt();
+   int square=n*n;
+   String nAsString=n+" ";
+   String squareAsString=square+" ";
+   if(squareAsString.endsWith(nAsString))
+   {
+    System.out.println(n+ "is automorphic number");
+   }
+   else
+  {
+    System.out.println(n+ "is not automorphic number");
+    }
+   }
+}
+
+
+OUTPUT:
+D:\Deepu>java automorphic
+Enter no:
+6
+6is automorphic number
+
+D:\Deepu>java automorphic
+Enter no:
+19
+19is not automorphic number"
