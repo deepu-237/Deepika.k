@@ -1,0 +1,31 @@
+ import java.io.*;
+ 
+class aditya {
+    static void decToOctal(int n)
+    {
+        int[] octalNum = new int[100];
+        int i = 0;
+        while (n != 0) {
+            // storing remainder in octal array
+            octalNum[i] = n % 8;
+            n = n / 8;
+            i++;
+        }
+ 
+        // Printing octal number array in reverse order
+        for (int j = i - 1; j >= 0; j--)
+            System.out.print(octalNum[j]);
+    }
+ 
+    // Driver Code
+    public static void main(String[] args)
+    {
+        int n = 33;
+ 
+        // Function Call
+        decToOctal(n);
+    }
+}
+
+Output
+41
