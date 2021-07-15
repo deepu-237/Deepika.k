@@ -1,0 +1,57 @@
+ class Solution {
+    
+    private int addChar(char[] chars, char cur, int count, int index){
+        
+        chars[index++] = cur;
+        
+        if(count <= 1){
+            return index;
+        }
+        
+        String countStr = String.valueOf(count);
+        int len = countStr.length();
+                    
+        int j = 0;
+        while(j < len){
+            char val = countStr.charAt(j);
+            chars[index++] = val;
+            j++;
+        }
+        
+        return index;
+    }
+    
+    public int compress(char[] chars) {
+        
+        int i = 1;
+        
+        if(chars.length == 0){
+            return 0;
+        }
+        
+        char cur = chars[0];
+        int index = 0;
+        int count = 1;
+        
+        while(i < chars.length){
+            if (chars[i] == cur){
+                count += 1;
+                i++;
+                continue;
+            } else {
+                index = addChar(chars, cur, count, index);
+                cur = chars[i];
+                count = 1;
+                i++;
+            }
+        }
+        
+        index = addChar(chars, cur, count, index);
+        return index;
+    }
+}
+
+Input:
+["a", "a", "b", "b", "c", "c", "c"]
+ Out put:
+["a", "2", "b", "2", "c", "3"]
