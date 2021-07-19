@@ -1,0 +1,18 @@
+import java.util.*;
+class map1
+{
+public static void main(String args[])
+{
+TreeMap<Integer,String> t=new TreeMap<Integer,String>();
+t.put(5,"john");
+t.put(1,"sam");
+t.put(7,kim");
+System.out.println(t);
+}
+ }
+
+Output
+
+1=Sam
+5=John
+7=Kim
