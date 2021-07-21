@@ -1,0 +1,39 @@
+import java.util.*;
+  class  main
+{
+
+	public static void main(String[] args)
+  {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("enter n value: ");
+		int n=sc.nextInt();
+		ArrayList<Integer> A=new ArrayList<Integer>();
+		System.out.print("enter values into Arraylist: ");
+		for(int i=0;i<n;i++)
+    {
+		A.add(sc.nextInt());
+	  }
+		System.out.print("enter k value: ");
+		int k=sc.nextInt();
+		for(int j=0;j<A.size();j++)
+   {
+		if(A.get(j)<=k)
+       {
+		    A.remove(j);
+        } 
+   }
+		System.out.println(A);
+  }
+
+}
+Output:
+enter n value: 7
+enter values into Arraylist: 30 40 15 25 7 99 21
+enter k value: 20
+[30, 40, 25, 99, 21]
+
+D:\deepu>java main
+enter n value: 8
+enter values into Arraylist: 12 45 78 64 99 24 44 33
+enter k value: 40
+[45, 78, 64, 99, 44]
