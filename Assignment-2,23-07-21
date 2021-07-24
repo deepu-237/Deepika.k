@@ -1,0 +1,24 @@
+import java.util.*;
+public class reverse
+{
+public static void main(String args[])
+{
+String str="ADITYA";
+int n=str.length();
+char ch[]=str.toCharArray();
+Stack<Character>st=new Stack<Character>();
+for(int i=0;i<n;i++)
+{
+st.push(ch[i]);
+}
+for(int i=0;i<n;i++)
+{
+char x=st.pop();
+System.out.print(x);
+}
+}
+}
+  
+
+Output
+AYTIDA
