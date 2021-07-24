@@ -1,0 +1,28 @@
+import java.util.*;
+class main
+{
+     public static void main(String args[]) 
+           {
+              Scanner sc=new Scanner(System.in);
+              System.out.print("enter n value:");
+              int n=sc.nextInt();
+              Stack<Integer> x=new Stack<Integer>();
+              while(n-->0)
+               {
+	x.push(sc.nextInt());
+                 }
+             System.out.println("max value:" +Collections.max(x));
+            System.out.println("min value:" +Collections.min(x));
+          }
+ }
+
+Output
+
+Enter n value: 5
+10
+20
+5
+40
+7
+Maximum value: 40
+Minimum value:5
